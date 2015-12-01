@@ -172,6 +172,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\BookListViewModel.cs" />
     <Compile Include="Models\BooksContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
