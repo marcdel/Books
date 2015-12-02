@@ -10,10 +10,19 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-@foreach (var item in Model.GroupedBooks)
-{
-    <a href="#@item.Key">@item.Key | </a>
-}
+<p class="letters">
+    @foreach (var letter in Model.Letters)
+    {
+        if (Model.GroupedBooks.Any(books => books.Key == letter))
+        {
+            <a href="#@letter">@letter</a>
+        }
+        else
+        {
+            <span>@letter</span>
+        }
+    }
+</p>
 
 @foreach (var item in Model.GroupedBooks)
 {

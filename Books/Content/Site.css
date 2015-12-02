@@ -16,3 +16,6 @@ textarea {
     max-width: 280px;
 }
 
+.letters a {
+    text-decoration: underline;
+}
