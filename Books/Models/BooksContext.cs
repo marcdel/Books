@@ -11,7 +11,7 @@ namespace Books.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
     
-        public BooksContext() : base("name=BooksContext")
+        public BooksContext() : base("DefaultConnection")
         {
         }
 

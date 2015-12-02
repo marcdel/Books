@@ -14,46 +14,8 @@ namespace Books.Controllers
         // GET: Books
         public async Task<ActionResult> Index()
         {
-            var grouped = new BookListViewModel(GetBooks());
+            var grouped = new BookListViewModel(await db.Books.ToListAsync());
             return View(grouped);
-            //return View(await db.Books.ToListAsync());
-        }
-
-        private List<Book> GetBooks()
-        {
-            return new List<Book>
-            {
-                new Book
-                {
-                    Isbn = 1,
-                    Title = "Apple",
-                    Description = "About apples"
-                },
-                new Book
-                {
-                    Isbn = 3,
-                    Title = "Animal",
-                    Description = "About animals"
-                },
-                new Book
-                {
-                    Isbn = 5,
-                    Title = "Acorn",
-                    Description = "About acorns"
-                },
-                new Book
-                {
-                    Isbn = 2,
-                    Title = "Banana",
-                    Description = "About bananas"
-                },
-                 new Book
-                {
-                    Isbn = 4,
-                    Title = "Zebra",
-                    Description = "About zebras"
-                },
-            };
         }
 
         // GET: Books/Details/5
